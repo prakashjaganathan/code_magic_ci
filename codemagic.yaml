@@ -10,7 +10,8 @@ workflows:
         FCI_KEYSTORE_PASSWORD: Encrypted(Z0FBQUFBQmc5Ukw3RkU3dHRMUW0tQkZUX1hXY01IdFRYaHB2bm9oeklLRTJfaTJDclhxUjliQ3ZiU3FiVzhtQzJBcWdJWDhybHBVUnlhTmk3NmtnNEN6OG1lX0NGXzZaMVE9PQ==) # <-- Put your encrypted keystore password here
         FCI_KEY_PASSWORD: Encrypted(Z0FBQUFBQmc5Ukw3RkU3dHRMUW0tQkZUX1hXY01IdFRYaHB2bm9oeklLRTJfaTJDclhxUjliQ3ZiU3FiVzhtQzJBcWdJWDhybHBVUnlhTmk3NmtnNEN6OG1lX0NGXzZaMVE9PQ==) # <-- Put your encrypted key alias password here
         FCI_KEY_ALIAS: Encrypted(Z0FBQUFBQmc5Ukw3RkU3dHRMUW0tQkZUX1hXY01IdFRYaHB2bm9oeklLRTJfaTJDclhxUjliQ3ZiU3FiVzhtQzJBcWdJWDhybHBVUnlhTmk3NmtnNEN6OG1lX0NGXzZaMVE9PQ==) # <-- Put your encrypted key alias here
-        # PACKAGE_NAME: "com.example.code_magic_ci" # <-- Put your package name here
+        PACKAGE_NAME: "com.example.code_magic_ci" # <-- Put your package name here
+        BUILD_NUMBER: "21071901"
         # GOOGLE_PLAY_TRACK: "alpha" # <-- This must be "alpha" or above.  
       # flutter: stable
       # xcode: latest
@@ -45,9 +46,8 @@ workflows:
         script: |
           cd . && flutter build apk --release --build-name=1.0.0 --build-number=21071901
     artifacts:
-      - build/**/outputs/**/*.apk
-      # - build/**/outputs/apk/**/*.apk
-      # - build/**/outputs/**/*.aab
+      - build/**/outputs/**/$BUILD_NUMBER.apk
+      - build/**/outputs/**/$BUILD_NUMBER.aab
       - build/**/outputs/**/mapping.txt
       - flutter_drive.log
     publishing:
@@ -59,13 +59,13 @@ workflows:
         notify:
           success: true     # To not receive a notification when a build succeeds
           failure: true    # To not receive a notification when a build fails
-      slack: 
-        # See the following link about how to connect your Slack account - https://docs.codemagic.io/publishing-yaml/distribution/#slack
-        channel: '#builds'
-        notify_on_build_start: true   # To receive a notification when a build starts
-        notify:
-          success: true               # To not receive a notification when a build succeeds
-          failure: false              # To not receive a notification when a build fails
+      # slack: 
+      #   # See the following link about how to connect your Slack account - https://docs.codemagic.io/publishing-yaml/distribution/#slack
+      #   channel: '#builds'
+      #   notify_on_build_start: true   # To receive a notification when a build starts
+      #   notify:
+      #     success: true               # To not receive a notification when a build succeeds
+      #     failure: false              # To not receive a notification when a build fails
       # google_play:
       #   credentials: $GCLOUD_SERVICE_ACCOUNT_CREDENTIALS
       #   track: $GOOGLE_PLAY_TRACK
