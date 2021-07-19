@@ -46,8 +46,8 @@ workflows:
         script: |
           cd . && flutter build apk --release --build-name=1.0.0 --build-number=21071901
     artifacts:
-      - build/**/outputs/**/$BUILD_NUMBER.apk
-      - build/**/outputs/**/$BUILD_NUMBER.aab
+      - build/**/outputs/**/21071901.apk
+      - build/**/outputs/**/21071901.aab
       - build/**/outputs/**/mapping.txt
       - flutter_drive.log
     publishing:
