@@ -26,30 +26,34 @@ workflows:
           keyAlias=$FCI_KEY_ALIAS
           storeFile=$FCI_KEYSTORE_PATH
           EOF
-      # - name: Set up local.properties
-      #   script: |
-      #     echo "flutter.sdk=$HOME/programs/flutter" > "$FCI_BUILD_DIR/android/local.properties"
+      - name: Set up local.properties
+        script: |
+          echo "flutter.sdk=$HOME/programs/flutter" > "$FCI_BUILD_DIR/android/local.properties"
       - name: Get Flutter packages
         script: |
           cd . && flutter packages pub get
-      - name: Flutter analyze
-        script: |
-          cd . && flutter analyze
-      - name: Flutter unit tests
-        script: |
-          cd . && flutter test
-        ignore_failure: true          
+      # - name: Flutter analyze
+      #   script: |
+      #     cd . && flutter analyze
+      # - name: Flutter unit tests
+      #   script: |
+      #     cd . && flutter test
+      #   ignore_failure: true          
       # - name: Install pods
       #   script: |
       #     find . -name "Podfile" -execdir pod install \;
-      - name: Build APK with Flutter  
-        script: |
-          cd . && flutter build apk --release --build-name=1.0.0 --build-number=21071901
-    artifacts:
-      - build/**/outputs/**/*.apk
-      - build/**/outputs/**/*.aab
-      - build/**/outputs/**/mapping.txt
-      - flutter_drive.log
+      # - name: Build APK with Flutter  
+      #   script: |
+      #     cd . && flutter build apk --release --build-name=1.0.0 --build-number=21071901
+      - name: Build for Android APK
+        script: flutter build apk
+      - name: Build for Android App Bundle
+        script: flutter build appbundle
+    # artifacts:
+    #   - build/**/outputs/**/*.apk
+    #   - build/**/outputs/**/*.aab
+    #   - build/**/outputs/**/mapping.txt
+    #   - flutter_drive.log
     publishing:
       # See the following link for details about email publishing - https://docs.codemagic.io/publishing-yaml/distribution/#email
       email:
