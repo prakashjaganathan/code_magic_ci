@@ -5,11 +5,11 @@ workflows:
     environment:
       vars:
         GCLOUD_SERVICE_ACCOUNT_CREDENTIALS: Encrypted(...) # <-- Put your encrypted Google Play service account credentials here.
-        FCI_KEYSTORE_PATH: /tmp/keystore.keystore
-        FCI_KEYSTORE: Encrypted(...) # <-- Put your encrypted keystore here
-        FCI_KEYSTORE_PASSWORD: Encrypted(...) # <-- Put your encrypted keystore password here
-        FCI_KEY_PASSWORD: Encrypted(...) # <-- Put your encrypted key alias password here
-        FCI_KEY_ALIAS: Encrypted(...) # <-- Put your encrypted key alias here
+        FCI_KEYSTORE_PATH: /Users/mohamed/works/Prakash/code_magic_key/code_magic_keystore
+        FCI_KEYSTORE: Encrypted(Z0FBQUFBQmc5UnFiOGdTSXFOdFgyQnk3ek0wYUE2bWI5bTExVXBiaWJYb1hpUVFIcXBuX2ItenRsZTlyUFVKdDE5UFJrVkpHX3NEaGNSY0tCU0xxdE5xVUZOa2NhLVRQRVBhS0tBZnlhUDdsOUNBQ2JMYXdYT29aWlpITVVjd29uRGNZbHRkSUFvLVQ0ek9jc3RRZEFiQkp0N1kxb1lKR1hVMG1TUE10OTdIQUMwbko1VDl0bTBqS0Foc29zZUw1LTJuaWJydnMxdENGcEN6QVNqNjhqLXBJbVZKSnFZSjFEZUtlQ05PaFk3QTd6cTlDejdZZktseHhSNmlUcGpGd2N0VzJMN2xMenIyN2NiTENIMGN5ZWQzVk9leC1VeUJvYXdYTkZoeWVQMGdjLVNmanIzN3ZhamduWEUteExIbnR4bFZuWDBIWnhOaTRZaXBweXVZdVBRdWRzS0IwSy1PQm9mS3YzTHdUdjl2bWFkeWZ5WlRIY3JaeXBOYnF4aUVLNHJKOEYzakRSaU9PTjZkRWJ3MDFLYnllMjViX1NYMURLVVZUWDVpRlI3VmlaNjczNjBsU0Uya2RPZFhpN0VfZnY5TDFPS0xfTlRURHZyblJyTmFxMllOeDJwN3RBNkxzS0c5MDlRUTNkRWFyUnAzcFBDQmVncDE4NmpsMzg0NVRSeVg0ODM1dlJHekhya2VsU0N5cjl1Rm0wSE1Td0dWTnZuOFZaTWhZMVY3X3FGM3JKNW9pamdqcUQwcWlFZjhFdXN1NFRJaUFRMkNBbU1HU2dBTHVfWDdtbGpENmNZV25XaVdNOW5lUHJyYXJKbk0tTFhiZmhPNXEyRm50X3Q4QW5iY3djQ2lfTGliVG12SGM4Z3c5YnplTjYxVGNVZ1hmQkJfcmhCaUItTTFWaUdvbjlOelg4UGtPY0Y3SGIzYWtvUnppZjFoVXNHVXlNZHY3WmladDRWMlFIWTlvMnR6RFJMYXRvYnd0UWRhT1FLQ1VQZ3FVSkJYU0t5NnNwNTdCR0I4X2lBN0ZrLUc5QnBHX3U2eWVSSXVZV29Hd0VSS2xjN2tYanJaUW5pYW4xYTlyQzVwZ0U5ZGVMQW9GR1c2VC1yOGNwSXc5dGhiUjgzNVpqVjEyclhEMmF4U1RtSU90UDllRWpSbzJuVmh2Ump5cmtBZGZpYzYxeEJZQV8xalgyOFI3djVNdklCMzg0YnV6aUFvZXdFTm1wSXFVWThhcy1ySG5DTGZPRW41ZlpaSV90LXVjcFRjbXR3UEN0TkpyOEJhcGxfbFpJLXFZX2ttWHppQlVfb3FUMWRqZGd6V1FiSzhVcGlNRmw5YU8zYW9DdjVENTNSMG5ORFBKUEVKdzVURUo0YnJrNDRKOXlQSWhFcXRHYnpWYjlKNmloR1pZZ21iQXludVhGSWxYaXhQNHFUOXd5cEdvb0ZoWEhmZmRoOGdSU2ZrSUxhcFl4WmhVc0J5SWs5UDBLSERBNkJValNJNGpvS2ZKYnFfZTZxcEZzVldERHFickc1aXMxcTltSGlONDBqVUFMallCQVhnMFlCcXduZjZBYzVGWHB2V3NpTDdQQlhrejdtNkFRcmNmYlFVdEJQcW1ld1NuSHpUcDRwcmVPektfTjdYN2p2YzFBbGpjdWxINWJpa09IYlQ3RXFBYU1uMlFrdjhoUFRfQkNtZUdFNDV5Vk5oa2tvUmtlRUt6bkhrUzdabThMTHFXMXh6dTlYMmh0UzhEOEpxdFQ5TmYtaG0xMUQzVnpGTDBMbnlVRDh6VC05R2tuMkJsNW9KVE1Ec29NVXpKMkhCMkk3NUllaVdyX0pGMEVSS1ZwMVQyaGxRWllPRm1mcXNXaUVfdVRtSm1PQUVPNU1jTmNnZTZsY2xFSkFfUFI2aVV3TkM0M2tqdU1XTDhGaURTd29HMm5UalpwcmNEc1owUV8ydkNmb2RvX09zelpISDJSN1VJWnZleHNuLXkzVlZtMUVCOWlKaFMyZmdZRmNGd0U3eTFqaVN5TmlweUFIUkdWQTQ4NUZEblJPd1JkSnVZQ3RhVVhSNXBNeVY4aTNiYkxkSGZEVlV6a2R3bDJHRVJkRmNqc2xUeDFuZ1AwMlgzOEJOU29YOHBNaDlJV1lzMUQxLURMdnR5WFl5MlpEVGpVVGlOb1lnWWo5X1hXVW81dmVRY2dKRU11ZWRMTkRacjB0ajZiaHV3UnllRHZjR3htTURFYjVLVFJpdFo4NW1oUURKR3d0dmdrOVFvX3J4NmdYdVhOTGtyUzgxdEltMEJDS1hRZjczcUVlX1ZfZ2tGc2tQN01TZklsbnRpbUxHd0lpSmVyOTg4X1JqSEhVNWt2a09zLXdpTVhUNXlnOXduWFZoRGxOM1lJeWJpcFE4d2pRS2ZXb1JMcE8ta3hROUdmRlBnWEJmOVk4c2xYb0pHWFJyUU1jSFRvYmRDa3JlUUl1VzBXSGMyLUt5bm5hWU9kdWJRTHQ0VDF5ODdSYnYtMjlJWHFiUGxRTzk0cEFhNVp4ZHBGdjBqUThuSnBpOS1MVWoyV2taTkdubmVVMUVoYUhta1UtdWhyN09Zb0s2TUdub3Y3MzBnNzZvNWNJeXhOX1ZGRERuWGhnSy1FSzljcWw2dk5TdmM1RS1HbWpBQzM2akY3MGJZTWx2OVRhR2kxYm5kcjd4WW1NUDY0WWpycTRvTk43QmNhRDFsRld1VGo4OGMxMUlxWWdKUmI1cVhNNld2VzlXdnc2UnNxUkFnTUF3Mi1IOTZJajRRTjNoTjJmWjlkMjlUVFZNdXVvTlFJa3VMOFA3a0xIUlJmYnR3WGNpTFdSQWd6SU41WVFqUkRBMkxIRDdhbDFGTU5paUJMd3M4VGZCMlA4M05mWmJtTVNaRGQ2bWVZODVCeEFCb0wzLTh1U3BHbE02ZFEtWkFmNWFwVFhNMHZQZklYeHVaUFpvU3NvM1R0ZzFEUjJzWGxQWWxfVkNBNmtPalNfSFlmZWlHQzNPVWJ1SlNmN2pGQkJ0SGIzUFpoeVBGcVdBTnlzYlQzZ2Y5LW03a1lTRDBucG56R2JUNVBQLVZoRHFFd3BkQ1MwYm13ellpNFZPdFVPSDJIaG45MFVpeEhiYXdKZERJd2Z3Mmtnd0RKQi13NXNpdmZSNEptdlp3b0pRazZ0YzN1Y2ZyY2gzSW5uYm9zUkNfSzFscnN3Y3pKVDZWVk81UXA0MmZqdms1d203elNvMWpmOTFyTEJtZGE3N210WWI0UDRsemZ6VmRDajFNNVJHeDVQalRVT3lQX0g5STNjTEFUQ3oyMW9aLVdfa1VYMUU5VmNlTDgxUzVEejJkREFEc3Z1d01EMnNIeVpkal83VTRkR1BUU2NXc192YnZtTXgwYVFxMHZGbFZHOGhWbFh5NnFJdDVUYUNHTFRYQWltR3FrNzljeTNaNGdPdW80ZWdkWXVEdDFfR19ObHV0THI3Vjc2LVNqdnZPSmsyOVBTdEduRDNUYW02SDJZMm5NZjVxQzhDYU5IWEFNY2xacjhPRWMtNWVTRjdQZkR0a3NMcUgxX01WQUd6aEVFTVVjdEllbmFhb0hyWkxteGtrUzRDWmJmSEk0eWgzVE1CNU5vTUFVTkE5WDR4dWpWbjBWXzh4VHNzSEExOFQ0dnZCZGhPWTF0anhLbzIxRG5DbjF2OWtReVFMTGdMWnE3Nm5lOGRMcnFJbFF3X1VMS1lHYUFvaDNiNVFKRzlMTzRJTlU5cWhxWHliNXk4bTRIRXI5Yzl3cFBHdXg5QVZwQm55WW43N0dGMWVOYUI3S2E3QmtXMkozT2prb3NzUWtLNmVpVndHOWVMVjlBYmFzaXVPTnRIbDkyOVlIUGEtM1ZYdlRuNnJMODAyNHpTNzh3dWo3M1BveFVKWjI2VDZ2cXNyRVlQUGJoS0lfT2NScUloQV9XUVpybXI5Nm1pWXpYUUdaU0gtSF9US1Frem1WVGVkamRtN3hSN0xlVEdxOGp2MnJrYnRkMXg5Sm93eFdrS3EzNktmRE1lQkxaaXZMNTRXTmY0UEtqcHNQZFZyVzZfSmFmS2gxWlY3UFlIeFpsYnR4MmJidVZKU2FjSDRwMGNPOG5FeU91WUxFY0lVZHN1Y19Ka3NsemVqc3NGXzU0M0NjWkJVcFRQaEhjTkRham95NzlJQWxhZXFiQVVoSkJBaXJCQm11TVJBRXp1QU9JcjhFRGFhYndZSEhGWDdaal82eDdEcmRNYlhZbTNSTmFDb1JGdGl0NVNON1RfNElLcmdZRzExTVItWU5Xa2liOWZRTlVBN2xjVTJZRk5KWUw2UFRpNWJZcXdlV3R5WDZZN0NoVnNMd0JodjBSWkV4QWFvcmhtaHNyellvOTY0YVNHd1BZczJ5TW1iQjNrTjZ1NGtfUUE3R3VuQ1M3SmpPNWpaYm1HRDJoMkwtc25EOTRJcVBxSlAwZ0d1Z2ZBSkw5QmZRM2JyZmZ4RzZGeU8wMnBwcEc2TVBDY0YwNTUzVGd5UDVkOHpReWFaU3dNb0F4bGd6YnYyMmM2bDZKN1E5Qnh4TmhBWV8xWDRKY1pJZEV1eWIyV00xTVZTbzk4cnlOU2R2VXBWRkozMVJzRklRazhxTGVaZDZJRGlnaGFfRWJoczhQMVBfT28wZ0xHYzFCUVlSZUVYUmZrY2F6TUlheUNudms2N0dmMnJuLXdvTURrNG5mbnJZQ2UwalZ3bVA5SW9ObzdBWDUybUdDTDhnVGFrREFsNUdxSHQ4RWcyMWtlR0t2dl81UHlzeHAwTXRmUkdodzhDemhzeUE3LWx4QXFJdFVhb3JVLWxWZDRpdUczLXJ5M2NkS0pqNkNWYlpLMGROUUN3NFhBU0p0aVRIRlE4M0t2U1IwSkJ1b2xHVUk2TjI5X3NVVjgwLTdLbDlqSHU5RmJMWWVQX1NtRGtrenRSVzF3alotNGZ3dDlGZ2cwcl9EX1hZaGQ0UUxMaC1wN0dhQU9DQXJOZG1RY05GaGozV2diNHVRQjFJaGg2Rng1MUFkRTFmZGdpYmMyajhKckY5MHhad3ZtTjlXbmc=) # <-- Put your encrypted keystore here
+        FCI_KEYSTORE_PASSWORD: Encrypted(Z0FBQUFBQmc5Ukw3RkU3dHRMUW0tQkZUX1hXY01IdFRYaHB2bm9oeklLRTJfaTJDclhxUjliQ3ZiU3FiVzhtQzJBcWdJWDhybHBVUnlhTmk3NmtnNEN6OG1lX0NGXzZaMVE9PQ==) # <-- Put your encrypted keystore password here
+        FCI_KEY_PASSWORD: Encrypted(Z0FBQUFBQmc5Ukw3RkU3dHRMUW0tQkZUX1hXY01IdFRYaHB2bm9oeklLRTJfaTJDclhxUjliQ3ZiU3FiVzhtQzJBcWdJWDhybHBVUnlhTmk3NmtnNEN6OG1lX0NGXzZaMVE9PQ==) # <-- Put your encrypted key alias password here
+        FCI_KEY_ALIAS: Encrypted(Z0FBQUFBQmc5Ukw3RkU3dHRMUW0tQkZUX1hXY01IdFRYaHB2bm9oeklLRTJfaTJDclhxUjliQ3ZiU3FiVzhtQzJBcWdJWDhybHBVUnlhTmk3NmtnNEN6OG1lX0NGXzZaMVE9PQ==) # <-- Put your encrypted key alias here
         PACKAGE_NAME: "io.codemagic.flutteryaml" # <-- Put your package name here
         GOOGLE_PLAY_TRACK: "alpha" # <-- This must be "alpha" or above.  
       flutter: stable
@@ -18,12 +18,12 @@ workflows:
     scripts:
       - name: Set up key properties
         script: |
-          echo $FCI_KEYSTORE | base64 --decode > /tmp/keystore.keystore
+          echo $FCI_KEYSTORE | base64 --decode > /Users/mohamed/works/Prakash/code_magic_key/code_magic_keystore
           cat >> "$FCI_BUILD_DIR/android/key.properties" <<EOF
           storePassword=$FCI_KEYSTORE_PASSWORD
           keyPassword=$FCI_KEY_PASSWORD
           keyAlias=$FCI_KEY_ALIAS
-          storeFile=/tmp/keystore.keystore
+          storeFile=$FCI_KEYSTORE_PATH
           EOF
       - name: Set up local.properties
         script: |
@@ -43,9 +43,10 @@ workflows:
           find . -name "Podfile" -execdir pod install \;
       - name: Build APK with Flutter  
         script: |
-          cd . && flutter build apk --release --build-name=1.0.0 --build-number=$(($(google-play get-latest-build-number --package-name "$PACKAGE_NAME" --tracks="$GOOGLE_PLAY_TRACK") + 1))
+          cd . && flutter build apk --release --build-name=1.0.0 --build-number=21071901
     artifacts:
-      - build/**/outputs/**/*.apk
+      # - build/**/outputs/**/*.apk
+      - build/**/outputs/apk/**/*.apk
       - build/**/outputs/**/*.aab
       - build/**/outputs/**/mapping.txt
       - flutter_drive.log
@@ -53,8 +54,8 @@ workflows:
       # See the following link for details about email publishing - https://docs.codemagic.io/publishing-yaml/distribution/#email
       email:
         recipients:
-          - user_1@example.com
-          - user_2@example.com
+          - prakash.jaganathan@anubavam.com
+          # - user_2@example.com
         notify:
           success: true     # To not receive a notification when a build succeeds
           failure: false    # To not receive a notification when a build fails
@@ -129,8 +130,7 @@ workflows:
       # See the following link for details about email publishing - https://docs.codemagic.io/publishing-yaml/distribution/#email
       email:
         recipients:
-          - user_1@example.com
-          - user_2@example.com
+          - prakash.jaganathan@anubavam.com
         notify:
           success: true     # To receive a notification when a build succeeds
           failure: false    # To not receive a notification when a build fails
