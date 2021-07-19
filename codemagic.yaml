@@ -10,7 +10,7 @@ workflows:
         FCI_KEYSTORE_PASSWORD: Encrypted(Z0FBQUFBQmc5Ukw3RkU3dHRMUW0tQkZUX1hXY01IdFRYaHB2bm9oeklLRTJfaTJDclhxUjliQ3ZiU3FiVzhtQzJBcWdJWDhybHBVUnlhTmk3NmtnNEN6OG1lX0NGXzZaMVE9PQ==) # <-- Put your encrypted keystore password here
         FCI_KEY_PASSWORD: Encrypted(Z0FBQUFBQmc5Ukw3RkU3dHRMUW0tQkZUX1hXY01IdFRYaHB2bm9oeklLRTJfaTJDclhxUjliQ3ZiU3FiVzhtQzJBcWdJWDhybHBVUnlhTmk3NmtnNEN6OG1lX0NGXzZaMVE9PQ==) # <-- Put your encrypted key alias password here
         FCI_KEY_ALIAS: Encrypted(Z0FBQUFBQmc5Ukw3RkU3dHRMUW0tQkZUX1hXY01IdFRYaHB2bm9oeklLRTJfaTJDclhxUjliQ3ZiU3FiVzhtQzJBcWdJWDhybHBVUnlhTmk3NmtnNEN6OG1lX0NGXzZaMVE9PQ==) # <-- Put your encrypted key alias here
-        PACKAGE_NAME: "io.codemagic.flutteryaml" # <-- Put your package name here
+        PACKAGE_NAME: "com.example.code_magic_ci" # <-- Put your package name here
         GOOGLE_PLAY_TRACK: "alpha" # <-- This must be "alpha" or above.  
       flutter: stable
       xcode: latest
@@ -18,16 +18,16 @@ workflows:
     scripts:
       - name: Set up key properties
         script: |
-          echo $FCI_KEYSTORE | base64 --decode > /Users/mohamed/works/Prakash/code_magic_key/code_magic_keystore
+          echo $FCI_KEYSTORE | base64 --decode > $FCI_KEYSTORE_PATH
           cat >> "$FCI_BUILD_DIR/android/key.properties" <<EOF
           storePassword=$FCI_KEYSTORE_PASSWORD
           keyPassword=$FCI_KEY_PASSWORD
           keyAlias=$FCI_KEY_ALIAS
           storeFile=$FCI_KEYSTORE_PATH
           EOF
-      - name: Set up local.properties
-        script: |
-          echo "flutter.sdk=$HOME/programs/flutter" > "$FCI_BUILD_DIR/android/local.properties"
+      # - name: Set up local.properties
+      #   script: |
+      #     echo "flutter.sdk=$HOME/programs/flutter" > "$FCI_BUILD_DIR/android/local.properties"
       - name: Get Flutter packages
         script: |
           cd . && flutter packages pub get
@@ -45,9 +45,9 @@ workflows:
         script: |
           cd . && flutter build apk --release --build-name=1.0.0 --build-number=21071901
     artifacts:
-      # - build/**/outputs/**/*.apk
-      - build/**/outputs/apk/**/*.apk
-      - build/**/outputs/**/*.aab
+      - build/**/outputs/**/*.apk
+      # - build/**/outputs/apk/**/*.apk
+      # - build/**/outputs/**/*.aab
       - build/**/outputs/**/mapping.txt
       - flutter_drive.log
     publishing:
@@ -58,7 +58,7 @@ workflows:
           # - user_2@example.com
         notify:
           success: true     # To not receive a notification when a build succeeds
-          failure: false    # To not receive a notification when a build fails
+          failure: true    # To not receive a notification when a build fails
       slack: 
         # See the following link about how to connect your Slack account - https://docs.codemagic.io/publishing-yaml/distribution/#slack
         channel: '#builds'
