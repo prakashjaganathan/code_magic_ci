@@ -39,15 +39,15 @@ workflows:
         script: |
           cd . && flutter test
         ignore_failure: true          
-      - name: Install pods
-        script: |
-          find . -name "Podfile" -execdir pod install \;
+      # - name: Install pods
+      #   script: |
+      #     find . -name "Podfile" -execdir pod install \;
       - name: Build APK with Flutter  
         script: |
           cd . && flutter build apk --release --build-name=1.0.0 --build-number=21071901
     artifacts:
-      - build/**/outputs/**/21071901.apk
-      - build/**/outputs/**/21071901.aab
+      - build/**/outputs/**/*.apk
+      - build/**/outputs/**/*.aab
       - build/**/outputs/**/mapping.txt
       - flutter_drive.log
     publishing:
