@@ -60,6 +60,16 @@ workflows:
         recipients:
           - prakash.jaganathan@anubavam.com
           # - user_2@example.com
+      scripts:
+      name: Check for apk
+    script: |
+      apkPath=$(find build -name "*.apk" | head -1)
+      if [[ -z ${apkPath} ]]
+      then
+        echo "No .apk were found"
+      else
+        echo "Publishing .apk artifacts"
+      fi    
         notify:
           success: true     # To not receive a notification when a build succeeds
           failure: false    # To not receive a notification when a build fails
