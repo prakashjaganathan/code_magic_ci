@@ -1,4 +1,4 @@
-package com.example.code_magic_ci;
+package com.code_magic_ci;
 
 import io.flutter.embedding.android.FlutterActivity;
 

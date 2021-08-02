@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.code_magic_ci">
+    package="com.code_magic_ci">
    <application
         android:label="code_magic_ci"
         android:icon="@mipmap/ic_launcher">
